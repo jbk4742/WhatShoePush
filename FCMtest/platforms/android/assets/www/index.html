@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Blank App</title>
+    </head>
+    <body>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("deviceready", onDeviceReady, false);
+
+            function onDeviceReady() {
+                alert(FCMPlugin)
+                FCMPlugin.getToken(
+                    function(token){
+                        console.log("token :"+ token)
+                        alert("token : "+ token);
+                    },
+                    function(err){
+                        console.log('error retrieving token: ' + err);
+                    }
+                )
+
+                FCMPlugin.onNotification(
+                    function(data){
+                        if(data.wasTapped){
+                            alert( JSON.stringify(data) );
+                        }else{
+                            alert( JSON.stringify(data) );
+                        }
+                    },
+                    function(msg){
+                        alert('onNotification callback successfully registered: ' + msg)
+                        console.log('onNotification callback successfully registered: ' + msg);
+                    },
+                    function(err){
+                        console.log('Error registering onNotification callback: ' + err);
+                    }
+                );
+            }
+        </script>
+    </body>
+</html>
