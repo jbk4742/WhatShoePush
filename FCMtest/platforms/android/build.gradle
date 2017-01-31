@@ -250,6 +250,7 @@ dependencies {
     // SUB-PROJECT DEPENDENCIES START
     debugCompile(project(path: "CordovaLib", configuration: "debug"))
     releaseCompile(project(path: "CordovaLib", configuration: "release"))
+    compile "com.squareup.okhttp:okhttp-urlconnection:2+"
     compile "com.google.firebase:firebase-core:+"
     compile "com.google.firebase:firebase-messaging:+"
     // SUB-PROJECT DEPENDENCIES END

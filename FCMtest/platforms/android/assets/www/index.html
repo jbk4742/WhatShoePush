@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Blank App</title>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     </head>
     <body>
         <script type="text/javascript" src="cordova.js"></script>
@@ -14,19 +15,20 @@
                 alert(FCMPlugin)
                 FCMPlugin.getToken(
                     function(token){
-                        console.log("token :"+ token)
+                        console.log("token :---------------------------------------------------------------------------------------------"+ token)
                         alert("token : "+ token);
                     },
                     function(err){
                         console.log('error retrieving token: ' + err);
                     }
                 )
-
                 FCMPlugin.onNotification(
                     function(data){
                         if(data.wasTapped){
-                            alert( JSON.stringify(data) );
+                            alert("성공");
+                            alert( JSON.stringify(data)+"1" );
                         }else{
+                            alert("실패   ");
                             alert( JSON.stringify(data) );
                         }
                     },
@@ -35,6 +37,7 @@
                         console.log('onNotification callback successfully registered: ' + msg);
                     },
                     function(err){
+                        alert(err);
                         console.log('Error registering onNotification callback: ' + err);
                     }
                 );

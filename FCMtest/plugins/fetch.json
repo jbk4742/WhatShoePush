@@ -7,6 +7,30 @@
         "is_top_level": true,
         "variables": {}
     },
+    "cordova-plugin-inappbrowser": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-inappbrowser@1.6.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-okhttp": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-okhttp"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-dialogs": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-dialogs"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
     "cordova-plugin-fcm": {
         "source": {
             "type": "registry",
@@ -15,10 +39,10 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-inappbrowser": {
+    "cordova-plugin-network-information": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-inappbrowser@1.6.1"
+            "id": "cordova-plugin-network-information"
         },
         "is_top_level": true,
         "variables": {}

@@ -10,10 +10,19 @@
         "cordova-plugin-velda-devicefeedback": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-okhttp": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
+        "cordova-plugin-dialogs": {
+            "PACKAGE_NAME": "com.phonegap.helloworld"
+        },
         "cordova-plugin-fcm": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         },
-        "cordova-plugin-inappbrowser": {
+        "cordova-plugin-network-information": {
             "PACKAGE_NAME": "com.phonegap.helloworld"
         }
     },

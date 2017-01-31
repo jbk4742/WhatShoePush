@@ -20,11 +20,11 @@ FCMPlugin.prototype.onNotification = function( callback, success, error ){
 // TOKEN REFRESH CALLBACK //
 FCMPlugin.prototype.onTokenRefresh = function( callback ){
 	FCMPlugin.prototype.onTokenRefreshReceived = callback;
-}	//생선된 토큰을
+}
 // GET TOKEN //
 FCMPlugin.prototype.getToken = function( success, error ){
 	exec(success, error, "FCMPlugin", 'getToken', []);
-}	//토큰 받아온다.
+}
 
 // DEFAULT NOTIFICATION CALLBACK //
 FCMPlugin.prototype.onNotificationReceived = function(payload){
