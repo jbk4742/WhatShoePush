@@ -20,6 +20,31 @@ public class MyFirebaseInstanceIDService extends FirebaseInstanceIdService {
 		FCMPlugin.sendTokenRefresh( refreshedToken );
 
         // TODO: Implement this method to send any registration to your app's servers.
-        //sendRegistrationToServer(refreshedToken);
+        sendRegistrationToServer(refreshedToken);
     }
+
+     private void sendRegistrationToServer(String token) {
+            // Add custom implementation, as needed.
+
+            OkHttpClient client = new OkHttpClient();
+            RequestBody body = new FormBody.Builder()
+                    .add("Token", token)
+                    .build();
+
+            //request
+            Request request = new Request.Builder()
+                    .url("http://byeongkwan.dothome.co.kr/php/register.php")
+                    .post(body)
+                    .build();
+
+            try {
+                Log.d("success");
+                client.newCall(request).execute();
+            } catch (IOException e) {
+                Log.d("error");
+                e.printStackTrace();
+
+            }
+
+        }
 }

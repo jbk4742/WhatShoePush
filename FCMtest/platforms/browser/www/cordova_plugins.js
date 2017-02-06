@@ -81,7 +81,8 @@ module.exports.metadata =
     "cordova-plugin-okhttp": "2.0.0",
     "cordova-plugin-dialogs": "1.3.1",
     "cordova-plugin-fcm": "2.1.1",
-    "cordova-plugin-network-information": "1.3.1"
+    "cordova-plugin-network-information": "1.3.1",
+    "cordova-plugin-whitelist": "1.3.1"
 }
 // BOTTOM OF METADATA
 });

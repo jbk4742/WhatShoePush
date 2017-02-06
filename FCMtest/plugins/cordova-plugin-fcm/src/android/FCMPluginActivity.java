@@ -47,7 +47,7 @@ public class FCMPluginActivity extends Activity {
     }
 
     private void forceMainActivityReload() {
-        PackageManager pm = getPackageManager();
+        PackageManager pm = getPackageMa    nager();
         Intent launchIntent = pm.getLaunchIntentForPackage(getApplicationContext().getPackageName());
         startActivity(launchIntent);
     }

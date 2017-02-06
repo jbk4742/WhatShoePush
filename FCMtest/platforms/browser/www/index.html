@@ -7,6 +7,10 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     </head>
     <body>
+
+        <form id="testForm" action="http://byeongkwan.dothome.co.kr/php/test.php" method="post">
+            <input id="Token" name="Token" type="text"style="display:none;">
+        </form>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript">
             document.addEventListener("deviceready", onDeviceReady, false);
@@ -16,7 +20,9 @@
                 FCMPlugin.getToken(
                     function(token){
                         console.log("token :---------------------------------------------------------------------------------------------"+ token)
-                        alert("token : "+ token);
+                        document.getElementById('Token').value = token;
+                        alert('여기다'+token);
+                        document.getElementById('testForm').submit();
                     },
                     function(err){
                         console.log('error retrieving token: ' + err);
@@ -24,11 +30,9 @@
                 )
                 FCMPlugin.onNotification(
                     function(data){
-                        alert("여깃");
-                        alert(data.wasTapped);
                         if(data.wasTapped){
                             alert("성공");
-                            alert( JSON.stringify(data)+"1" );
+                            alert( JSON.stringify(data));
                         }else{
                             alert("실패   ");
                             alert( JSON.stringify(data) );
